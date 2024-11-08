@@ -1,4 +1,4 @@
-// static methods and properties
+// static methods and properties - OBJECT BANNE KE JARURAT NHI CLASS HI CALL KAR SAKTA HAI
 class Person{
     constructor(firstName, lastName, age){
         this.firstName = firstName;
@@ -9,6 +9,7 @@ class Person{
         return 'this is person class';
     }
     static desc = "static property";
+
     get fullName(){
         return `${this.firstName} ${this.lastName}`
     }
@@ -32,6 +33,6 @@ class Person{
 
 const person1 = new Person("harshit", "sharma", 8);
 // // console.log(person1.eat());
-// const info = Person.classInfo();
-// console.log(person1.desc);
-// console.log(info);
+const info = Person.classInfo();
+console.log(person1.desc);
+console.log(info);

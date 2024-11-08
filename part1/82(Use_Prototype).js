@@ -9,6 +9,7 @@
 //         return 'toon na na na la la ';
 //     }
 // }
+
 function createUser(firstName, lastName, email, age, address){
     const user = Object.create(createUser.prototype);// {}
     user.firstName = firstName;
