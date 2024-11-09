@@ -22,6 +22,7 @@ const heading10 = document.querySelector(".heading10");
 // seven      1s      brown
 
 // callback hell  
+
 // setTimeout(()=>{
 //   heading1.textContent = "one";
 //   heading1.style.color = "violet";
