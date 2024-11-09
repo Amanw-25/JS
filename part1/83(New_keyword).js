@@ -1,7 +1,7 @@
 // new keyword 
 // 1.) empty object this = {}
 // 2.) return {} 
-// YE LINE const user = Object.create(createUser.prototype); KA KAAM AR RAGA NEW I.E PROTO SE LINK KAR RAHA
+// YE LINE const user = Object.create(createUser.prototype); KA KAAM Ab nhi raha NEW I.E PROTO SE LINK KAR RAHA
 
 // __proto__ 
 // // official ecmascript document

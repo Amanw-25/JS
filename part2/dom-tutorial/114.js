@@ -2,6 +2,7 @@
 // append
 // prepend
 // remove
+
 // const newTodoItem = document.createElement("li");
 // // const newTodoItemText = document.createTextNode("Teach students");
 // newTodoItem.textContent = "Teach students";

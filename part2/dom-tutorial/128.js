@@ -1,38 +1,38 @@
 // console.log("hello world");
 
 const grandparent = document.querySelector(".grandparent");
-// const parent = document.querySelector(".parent");
-// const child = document.querySelector(".child");
+const parent = document.querySelector(".parent");
+const child = document.querySelector(".child");
 
-// capturing events
-// child.addEventListener(
-//   "click",
-//   () => {
-//     console.log("capture !!!! child");
-//   },
-//   true
-// );
-// parent.addEventListener(
-//   "click",
-//   () => {
-//     console.log("capture !!!! parent");
-//   },
-//   true
-// );
-// grandparent.addEventListener(
-//   "click",
-//   () => {
-//     console.log("capture !!!! grandparent");
-//   },
-//   true
-// );
-// document.body.addEventListener(
-//   "click",
-//   () => {
-//     console.log("capture !!!! document.body");
-//   },
-//   true
-// );
+//capturing events - true dalne se capture ho raha hai aur koi farak nhi hai 
+child.addEventListener(
+  "click",
+  () => {
+    console.log("capture !!!! child");
+  },
+  true
+);
+parent.addEventListener(
+  "click",
+  () => {
+    console.log("capture !!!! parent");
+  },
+  true
+);
+grandparent.addEventListener(
+  "click",
+  () => {
+    console.log("capture !!!! grandparent");
+  },
+  true
+);
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("capture !!!! document.body");
+  },
+  true
+);
 
 ///// not capture
 
@@ -50,6 +50,6 @@ const grandparent = document.querySelector(".grandparent");
 // });
 
 // event delegation
-// grandparent.addEventListener("click", (e) => {
-//   console.log(e.target);
-// });
+grandparent.addEventListener("click", (e) => {
+  console.log(e.target);
+});

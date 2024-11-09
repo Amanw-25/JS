@@ -1,4 +1,4 @@
-// getter and setters - GET LAGANE SE METHOD KO PROPERTY E TARAH USE KAR SAKTE HAI IT MEANS LINE 21 KE TARAH LIKH SAKTE HAI LINE 20 JAYSE KI JARURAT NHI 
+// getter and setters - GET LAGANE SE METHOD KO PROPERTY niche ke  TARAH USE KAR SAKTE HAI IT MEANS LINE 21 KE TARAH LIKH SAKTE HAI LINE 20 JAYSE KI JARURAT NHI 
 class Person{
     constructor(firstName, lastName, age){
         this.firstName = firstName;
