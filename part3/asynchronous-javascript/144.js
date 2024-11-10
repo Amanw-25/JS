@@ -1,16 +1,27 @@
-// async await
+// // async await
 
-// fetch(URL)
-//     .then(response => {
-//         return response.json()
-//     })
-//     .then(data => {
-//         console.log(data);
-//     })
-console.log("script start");
-const URL = "https://jsonplaceholder.typicode.com/posts";
+// // fetch(URL)
+// //     .then(response => {
+// //         return response.json()
+// //     })
+// //     .then(data => {
+// //         console.log(data);
+// //     })
 
-// async function getPosts(){
+// console.log("script start");
+// const URL = "https://jsonplaceholder.typicode.com/posts";
+
+// // async function getPosts(){
+// //     const response = await fetch(URL);
+// //     if(!response.ok){
+// //         throw new Error("Something went wrong")
+// //     }
+// //     const data = await response.json();
+// //     return data;
+// // }
+
+
+// const getPosts = async() =>{
 //     const response = await fetch(URL);
 //     if(!response.ok){
 //         throw new Error("Something went wrong")
@@ -19,27 +30,40 @@ const URL = "https://jsonplaceholder.typicode.com/posts";
 //     return data;
 // }
 
+// // const myData = getPosts();
+// // console.log(myData);
 
-const getPosts = async() =>{
-    const response = await fetch(URL);
-    if(!response.ok){
-        throw new Error("Something went wrong")
-    }
-    const data = await response.json();
-    return data;
+// getPosts()
+//     .then((myData) => {
+//         console.log(myData);
+//     })
+//     .catch(error =>{
+//         console.log("inside catch")
+//         console.log(error);
+//     })
+
+
+// console.log("script end ");
+
+
+let URL="http://dog-api.kinduff.com//api/facts"
+// fetch(URL)
+// .then((response)=>{
+//     return response.json();
+// }).then((data)=>{
+//     console.log(data);
+// })
+// .catch((error)=>{
+//     console.log("Eroor")
+// })
+
+
+const fact= async()=>{
+    const response=await fetch(URL)
+    const data =response.json();
+    return data
 }
 
-// const myData = getPosts();
-// console.log(myData);
-
-getPosts()
-    .then((myData) => {
-        console.log(myData);
-    })
-    .catch(error =>{
-        console.log("inside catch")
-        console.log(error);
-    })
-
-
-console.log("script end ");
+fact()
+    .then((myData)=>{console.log(myData)})
+    .catch((error)=>console.log(error));

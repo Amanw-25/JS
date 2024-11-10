@@ -1,41 +1,43 @@
 // Promise
 console.log("script start");
-const bucket = ['coffee', 'chips','vegetables','salt','rice'];
+const bucket = ["coffee", "chips", "vegetables", "salt", "rice"];
 
+// produce
+const friedRicePromise = new Promise((resolve, reject) => {
+  if (
+    bucket.includes("vegetables") &&
+    bucket.includes("salt") &&
+    bucket.includes("rice")
+  ) {
+    resolve({ value: "friedrice" });
+  } else {
+    reject("could not do it");
+  }
+});
 
+// consume
+// how to consume
 
-const friedRicePromise = new Promise((resolve,reject)=>{
-    if(bucket.includes("vegetables")&& bucket.includes("salt") && bucket.includes("rice")){
-        resolve({value:"friedrice"});
-    }else{
-        reject("could not do it");
+friedRicePromise
+  .then(
+    // jab promise resolve hoga
+    (myfriedRice) => {
+      console.log("lets eat ", myfriedRice);
     }
-})
+  )
+  .catch((error) => {
+    console.log(error);
+  });
 
-// produce 
+setTimeout(() => {
+  console.log("hello from settimeout");
+}, 0);
 
-
-
-// consume 
-// how to consume 
-
-friedRicePromise.then(
-    // jab promise resolve hoga 
-    (myfriedRice)=>{
-    console.log("lets eat ", myfriedRice);
-    }
-    ).catch(
-    (error)=>{
-        console.log(error)
-    })
-
-
-setTimeout(()=>{
-    console.log("hello from settimeout")
-},0)
-
-for(let i = 0; i <=100; i++){
-    console.log(Math.random(), i);
+for (let i = 0; i <= 100; i++) {
+  console.log(Math.random(), i);
 }
 
-console.log("script end!!!!")
+console.log("script end!!!!");
+
+
+// ISME PAHILE PROMISE KA RESULT AAYEGA PHIR SETTIMEOUT AAYEGA KYUKI PROMISE MICROTASK QUEUE MAI JA KAR STORE HOTE HAI AUR SETTIMEOUT CALLBACKQUEUE MAI SO MOCROTASK QUEUE KI PRIORITY JAYDA HOTE HAI CALLBACKQUEUE SE ISLIYE.

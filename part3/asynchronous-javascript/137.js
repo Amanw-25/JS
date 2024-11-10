@@ -21,7 +21,7 @@ myPromise()
   .then((value)=>{
     console.log(value);
     value += "bar";
-    return value
+    return value // Ye value return nhi ho rahe actually promise return ho raha hai internally yaha return new Promise.resolve(value)
   })
   .then((value) =>{
     console.log(value);

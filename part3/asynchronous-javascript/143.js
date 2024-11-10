@@ -1,6 +1,6 @@
 // fetch 
 
-const URL = "https://jsonplaceholder.typicode.com/postssss";
+const URL = "https://jsonplaceholder.typicode.com/posts";
 
 fetch(URL,{
     method: 'POST',
